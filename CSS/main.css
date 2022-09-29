@@ -51,60 +51,40 @@
 /*If press the same link again, then it will be smooth when scrolling up*/
 html{
   scroll-behavior: smooth;
+  height:100%;
 }
 
 body{
+  position: relative;
   display: flex;
   flex-direction: column;
-  height:500vh;
-  background: var(--bgImg) no-repeat center center fixed;
+  height:100%;
+  /*background: var(--bgImg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover;*/
 }
 
-.navbar{
-  display:flex;
-  justify-content: space-between;
-  align-items:center;
-  background-color: var(--bgCol);
-  position: fixed;
-  min-width: 100%;
-  min-height: 12vh;
-  z-index: 10;
-  flex-direction: row;
-
-}
 
 .logo{
   padding: 20px 10px;
-  max-width: 175px;
-  overflow: hidden;
-
-}
-
-.logo img{
   max-width: 100%;
-  height: auto;
+  overflow: hidden;
   width: auto;
+  height:4em;
+
 }
 
-.navlist, .navlist a{
-  list-style-type: none;
-  justify-content: flex-end;
-  margin: 20px;
-  color:var(--fontCol);
-  font-weight: bold;
-  text-decoration: none;
-  font-size: auto;
-}
 
 
 
 .btnStartGame{
-  box-shadow: 0 0 0 2px black;
-  border-radius: 10px;
+  outline: none;
+  width: 120px;
+  margin: 0 auto;
+  height: 40px;
+  border-radius: 20px;
 }
 
 .btnStartGame::before{
@@ -115,16 +95,36 @@ body{
 
 }
 
+.primary-header{
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  background-color: var(--bgCol);
+  width: 100%;
+}
+
 .primary-navigation{
   position: relative;
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 20pt;
-  margin-top: 2rem;
+  font-size: 13pt;
 
-  z-index: 1;
+  z-index: 10;
 }
+
+.primary-navigation li{
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.primary-navigation a{
+
+  color:var(--fontCol);
+  text-decoration: none;
+
+}
+
 
 .mobile-nav-toggle{
   display: none;
@@ -135,7 +135,7 @@ body{
   .primary-navigation{
     position: fixed;
     inset: 13% 0 0 5%;
-
+    display: flex;
     flex-direction: column;
     justify-content:center;
     align-items: center;
@@ -143,6 +143,10 @@ body{
 
     transform: translateX(-120%);
     transition: transform 350ms ease-out;
+  }
+
+  .primary-navigation li{
+    margin-top: 1em;
   }
 
   .primary-navigation[data-visible="true"]{
@@ -163,17 +167,63 @@ body{
   }
 }
 
-section{
-  background-color: white;
-  background-size: contain;
-  height: 100vh;
-  z-index: 20;
-  padding-top: 120px;
+.imgParallax1{
+  /* The image used */
+  background-image: url("https://steamuserimages-a.akamaihd.net/ugc/945094571616867748/680E4979CC75A2310664E0883F3F3FC6CBECA3BE/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false");
+
+  /* Set a specific height */
+  min-height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-div + div{
-  margin-top: 100vh;
+.imgParallax2{
+  /* The image used */
+  background-image: var(--bgImg);
+
+  /* Set a specific height */
+  min-height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
+.imgParallax3{
+  /* The image used */
+  background-image: url("https://i.imgur.com/6CUsznY.gif");
+
+  /* Set a specific height */
+  min-height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.sectionCard{
+  position: relative;
+  z-index: -1;
+  height: 2000px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 9em 1em;
+}
+
+.sectionCard header{
+  font-size: 36pt;
+  font-weight: bolder;  
+}
+
 footer{
   justify-content: space-between;
 

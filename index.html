@@ -4,36 +4,61 @@
     <meta charset="utf-8">
     <title>RAYA Finicial Game</title>
     <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/news.css">
+    <link rel="stylesheet" href="CSS/gameFeatures.css">
     <script src="JAVASCRIPT/responsiveNavBar.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
-    <header>
+    <header class="primary-header flex">
+      <div><h1><img src="RES/img/logo.png" alt="RAYA LOGO" class="logo"></h1></div>
       <nav class="navbar">
-        <div class="logo"><h1> <img src="RES/img/logo.png" alt="RAYA LOGO"> </h1></div>
          <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"></button>
-          <ul id="primary-navigation" data-visible="false" class="primary-navigation navlist flex">
-          <li><a href="#">About Us</a></li>
-          <li><a href="">Characters</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="">Feedbacks</a></li>
-          <li class="uppercase btnStartGame"><a href=""><b>tax minigame</b></a></li>
+          <ul id="primary-navigation" data-visible="false" class="primary-navigation">
+            <li><a href="#main-content">About Us</a></li>
+            <li><a href="">Summary</a></li>
+            <li><a href="#gameFeatures">Game Features</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="">Feedbacks</a></li>
+            <li class="uppercase"><a href=""><b><button class="btnStartGame uppercase">tax minigame</button></b></a></li>
         </ul>
       </nav>
+
     </header>
-    <div>
-      <section>
-        test
-      </section>
+    <div class="imgParallax1"></div>
+    <div class="sectionCard" id="main-content">
+      <div>text</div>
     </div>
-    <div>
-      <section>
-        test
-      </section>
+    <div class="imgParallax2"></div>
+
+    <div class="sectionCard"id="gameFeatures">
+      <div class="gameFeatSection">
+        <header class="uppercase">Game Features</header>
+        <div class="container">
+          <div class="slider">
+            <img src="https://via.placeholder.com/200?text=1" alt="">
+            <img src="https://via.placeholder.com/400?text=2" alt="">
+            <img src="https://via.placeholder.com/100?text=3" alt="">
+            <img src="https://via.placeholder.com/150?text=4" alt="">
+            <img src="https://via.placeholder.com/250?text=5" alt="">
+          </div>
+        </div>
+      </div>
     </div>
-    <div>
-      <section>
-        test
-      </section>
+
+    <div class="imgParallax3"></div>
+
+    <div class = "sectionCard" id="news">
+      <div class="newsSection">
+        <header>NEWS</header>
+        <div class="flex">
+          <img src="https://www.mmu.edu.my/wp-content/uploads/2022/08/EDC.gif" class="imgPlaceholder"alt="">
+          <p class="textPlaceholder">
+            We would like to extend our heartiest congratulations to Team Raya for emerging as the winner of ‘Most Impactful Game Design’ for their Role-Playing Game (RPG) RAYA at Games Bagus, recently. Four MMU students from the 10 members of Team Raya were Muhammad Hafizuddin Hayat Abd Rani from the Faculty of Management (FOM); Goh Wei Hing from the Faculty of Creative Multimedia (FCM); Nur Sabrina Abdul Malik (FCM) and Neo Zhi Ming from the Faculty of Computing and Informatics (FCI). The team received USD 1,200 with 3 months of mentorship by a social impact mentor (Ms. Suraya Zainuddin from Ringgit Oh Ringgit) and a games industry mentor  (Ms. Saqina Latif from Persona Theory Games) and a booth slot in LEVEL UP KL  organised by Malaysia Digital Economy Corporation (MDEC) in October 2022.
+              <a href="https://www.mmu.edu.my/2022/08/mmu-students-bag-most-impactful-game-design-at-games-bagus/">Read more...</a>
+          </p>
+        </div>
+      </div>
     </div>
 
     <!--<div class="main-content">
